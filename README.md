@@ -6,12 +6,43 @@
 > A lightweight Golang scheduler supporting standard cron expressions, custom descriptors, custom intervals, and task dependencies. Easily write schedules using Go.<br>
 > Originally designed for [pardnchiu/go-ip-sentry](https://github.com/pardnchiu/go-ip-sentry) to handle threat score decay calculations.
 
-![lang](https://img.shields.io/github/languages/top/pardnchiu/go-cron)
-[![license](https://img.shields.io/github/license/pardnchiu/go-cron)](LICENSE)
-[![version](https://img.shields.io/github/v/tag/pardnchiu/go-cron)](https://github.com/pardnchiu/go-cron/releases)
-![card](https://goreportcard.com/badge/github.com/pardnchiu/go-cron)<br>
+[![pkg](https://pkg.go.dev/badge/github.com/pardnchiu/go-cron.svg)](https://pkg.go.dev/github.com/pardnchiu/go-cron)
+[![card](https://goreportcard.com/badge/github.com/pardnchiu/go-cron)](https://goreportcard.com/report/github.com/pardnchiu/go-cron)
+[![codecov](https://img.shields.io/codecov/c/github/pardnchiu/go-cron)](https://app.codecov.io/github/pardnchiu/go-cron)
+[![version](https://img.shields.io/github/v/tag/pardnchiu/go-cron?label=release)](https://github.com/pardnchiu/go-cron/releases)
+[![license](https://img.shields.io/github/license/pardnchiu/go-cron)](LICENSE)<br>
 [![readme](https://img.shields.io/badge/readme-EN-white)](README.md)
-[![readme](https://img.shields.io/badge/readme-ZH-white)](README.zh.md) 
+[![readme](https://img.shields.io/badge/readme-ZH-white)](README.zh.md)
+
+- [Key Features](#key-features)
+  - [Flexible Syntax](#flexible-syntax)
+  - [Task Dependencies](#task-dependencies)
+  - [Efficient Architecture](#efficient-architecture)
+- [Flowcharts](#flowcharts)
+- [Dependencies](#dependencies)
+- [Usage](#usage)
+  - [Installation](#installation)
+  - [Initialization](#initialization)
+    - [Basic Usage](#basic-usage)
+    - [Task Dependencies](#task-dependencies-1)
+- [Configuration](#configuration)
+- [Supported Formats](#supported-formats)
+  - [Standard](#standard)
+  - [Custom](#custom)
+- [Available Functions](#available-functions)
+  - [Scheduler Management](#scheduler-management)
+  - [Task Management](#task-management)
+- [Task Dependencies](#task-dependencies-2)
+  - [Basic Usage](#basic-usage-1)
+  - [Task States](#task-states)
+- [Timeout Mechanism](#timeout-mechanism)
+  - [Features](#features)
+- [Upcoming Features](#upcoming-features)
+  - [Enhanced Task Dependencies](#enhanced-task-dependencies)
+  - [Task Completion Trigger Rewrite](#task-completion-trigger-rewrite)
+- [License](#license)
+- [Star](#star)
+- [Author](#author)
 
 ## Key Features
 
@@ -120,8 +151,15 @@ flowchart TD
 ## Usage
 
 ### Installation
+
+> [!NOTE]
+> Latest commits may change. Recommended to use tagged versions.<br>
+> Commits containing only documentation updates or non-functional changes will be rebased later.
+
 ```bash
-go get github.com/pardnchiu/go-cron
+go get github.com/pardnchiu/go-cron@[VERSION]
+
+git clone --depth 1 --branch [VERSION] https://github.com/pardnchiu/go-cron.git
 ```
 
 ### Initialization
@@ -435,6 +473,10 @@ When execution time exceeds the configured `Delay`:
 ## License
 
 This project is licensed under [MIT](LICENSE).
+
+## Star 
+
+[![Star](https://api.star-history.com/svg?repos=pardnchiu/go-cron&type=Date)](https://www.star-history.com/#pardnchiu/go-cron&Date)
 
 ## Author
 
